@@ -1,0 +1,349 @@
+@import "../../../global.scss";
+.itemCard{
+    border-radius: 24px;
+    // overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    background-color: #F2F2F2;
+    transition: all 0.3s ease;
+    box-shadow: 1px 5px 10px #00000033;
+    padding: 17px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 4px 424px 0px rgba(0, 7, 72, 0.12);
+    // backdrop-filter: blur(10px);
+    margin-bottom: 16px;
+    &.bg_1{
+        background: linear-gradient(137deg, #00000000 0%, #00000594 100%);
+    }
+    &.bg_2{
+        background: linear-gradient(137deg, #3f3cff00 0%, #b8b6f326 100%);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 24px; 
+        border: 1px solid transparent;
+        background: linear-gradient(to right, #FF00FF, #FE511B) border-box;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    @include mobile_potrait{
+        margin-bottom: 24px;
+        padding : 0;
+        border-radius: 12px;
+        &::before {
+            opacity: 1;
+            border-radius: 12px; 
+        }
+    }
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: linear-gradient(44deg,#f0f,#0ff);
+    //     transition: all 0.3s ease;
+    //     opacity: 0;
+    // }
+    &:hover{
+        // transform: translateY(-10px);
+        // background: linear-gradient(to right, #FF00FF, #FE511B);
+        &::before{
+            opacity: 1;
+        }
+    }
+    @include mobile_potrait{
+    }
+    img {
+        width: 100%;
+    }
+    .nft-content {
+        border-radius: 10px;
+        // padding: 16px;
+        z-index: 1;
+        width: 100%;
+        // &:before {
+        //     content: "";
+        //     position: absolute;
+        //     inset: 0;
+        //     border-radius: 10px;
+        //     padding: 1px;
+        //     background: linear-gradient(44deg,#f0f,#0ff);
+        //     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        //     -webkit-mask-composite: xor;
+        //     mask-composite: exclude;
+        //     margin: 10px;
+        // }
+
+        @include mobile_potrait{
+            padding: 8px;
+        }
+        .img_div{
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            .img_cover{
+                position: absolute;
+                width: 100%;             
+                height: 100%;
+                // background-image: linear-gradient(108deg,rgb(255, 198, 255) 16%,#c1fefe);
+                top : 0;
+                left : 0;
+            }
+        }
+        .item-image{   
+            position: absolute;
+            width: 100%;             
+            height: 100%;
+            object-fit: cover;
+            top : 0;
+            left : 0;
+        }   
+    }
+    .nft-detail-content {
+        grid-area: auto;
+        gap : 10px;
+        display: flex;
+        flex-direction: column;
+        .nft-title {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;            
+            font-size: 18px;
+            line-height: 32px;
+            font-family: "Poppins",sans-serif;
+            font-weight: 600;
+            margin-bottom: 0;
+            @include mobile_potrait{
+                font-size: 16px;
+            }
+        }
+        .nft-price-content {
+            font-size: 16px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .sub_top {
+                margin: 0px;
+                margin-bottom: 0 !important;
+                font-size: 12px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            .sub_bottom{
+                font-weight: 600;
+                margin: 0px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 9px;
+                margin-bottom: 0 !important;
+            }  
+            .sub-left {
+                width: calc(100% - 32px);
+                display: flex;
+                align-items: center;
+
+                .avatar_div {
+                    width: 36px;
+                    height: 36px;
+                    margin-right: 11px;
+                    border-radius: 6px;
+                    overflow: hidden;
+
+                    @include mobile_potrait{
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 7px;
+                    }
+                }
+
+                .name {
+                    width: calc(100% - 47px);
+                    h2 {
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-bottom: 3px;
+                        width: 100%;
+                        text-overflow: ellipsis;
+                    }
+                    p {
+                        font-size: 9px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        opacity: 0.7;
+                        width: 100%;
+                        text-overflow: ellipsis;
+                    }
+
+                    @include mobile_potrait{
+                        width: calc(100% - 31px);
+                        h2 {
+                            font-size: 12px;
+                            margin-bottom: 0;
+                        }
+                        p {
+                            font-size: 7px;
+                        }
+                    }
+                }
+            }
+            .sub-right {
+                width: 50%;
+                text-align: right;
+            }
+            .logo_div{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: content-box;
+                margin: auto;
+                margin-right: 0;
+                position: relative;
+                @include mobile_potrait{
+                    width: 16px;
+                    height: 16px;
+                }
+                &.bg_color_dark{
+                    background-color: #fff;
+                }
+                &.bg_color_light{
+                    background-color: #333;
+                }
+                .pls_logo{
+                    width: 16px;
+                    height: 16px;
+                    z-index: 1;
+                    @include mobile_potrait{
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+                &::after{
+                    content: "";
+                    width: calc(100% + 6px);
+                    height: calc(100% + 6px);
+                    position: absolute;
+                    top : -3px;
+                    left : -3px;
+                    background-color: #ffffff66;
+                    border-radius: 50%;
+                }
+            }
+
+            &.info {
+                p {
+                    &.sub_top {
+                        font-size: 9px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin-bottom: 5.4px;
+
+                        @include mobile_potrait{
+                            font-size: 7px;
+                            margin-bottom: 3.5px;
+                        }
+                    }
+
+                    &.sub_bottom {
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+
+                        @include mobile_potrait{
+                            font-size: 9px;
+                        }
+                    }
+                }
+
+                .sub-left {
+                    flex-direction: column;
+                    p {
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+
+            }
+            .user_info{
+                width: calc(100% - 48px);
+                display: flex;
+                align-items: center;
+                .avatar_div{
+                    width: 55px;
+                    height: 55px;
+                    position: relative;
+                    border-radius: 12px;
+                    overflow: hidden;
+                    margin-right: 15px;
+                    @include mobile_potrait{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 8px;
+                        margin-right: 6px;
+                    }
+                    .img_cover{
+                        position: absolute;
+                        width: 100%;             
+                        height: 100%;
+                        background-image: linear-gradient(108deg,rgb(255, 198, 255) 16%,#c1fefe);
+                        top : 0;
+                        left : 0;
+                    }
+                }
+                .user-image{   
+                    position: absolute;
+                    width: 100%;             
+                    height: 100%;
+                    object-fit: cover;
+                    top : 0;
+                    left : 0;
+                }
+                .name{
+                    width: calc(100% - 70px);
+                    h2{
+                        @include mobile_potrait{
+                            font-size: 12px;
+                            margin-bottom: 0;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+            
+            @include mobile_potrait{
+                font-size: 14px;
+            }
+        }
+    }
+}

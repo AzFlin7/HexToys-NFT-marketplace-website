@@ -1,0 +1,86 @@
+/* KEYFRAMES */
+.scrolling{
+  position: absolute;
+  width: 100%;
+  top: 80;
+  left: 0;
+  z-index: 1;
+}
+.scrolling_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #ff00ff88;
+  margin: 20px;
+  border-radius: 20px;
+  height: 40px;
+  padding: 10px;
+  z-index: 1;
+
+  @media screen and (max-width: 576px) and (orientation:portrait) {
+    top: 85px;
+    display: none;
+  }
+
+  .scroll_view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 26px;    
+
+    &:hover {
+      ul {
+        animation-play-state: paused;
+      }
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-area: auto;
+      gap: 32px;
+      list-style: disc;
+      position: absolute;
+      left: 0;
+      margin: 0;
+      animation: scrolling 20s linear 0s infinite;
+
+      li {
+        font-size: 16px;
+        white-space: nowrap;
+
+        @media screen and (max-width: 576px) and (orientation:portrait) {
+          font-size: 14px;
+        }
+      }
+
+      @keyframes scrolling {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background: none;    
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+}

@@ -1,0 +1,296 @@
+@import "../../global.scss";
+
+.edit-collection {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 64px;
+    background-color: #fafafa;
+
+    @include mobile_potrait {
+        padding: 70px 16px;
+    }
+
+    @include mobile_landscape {
+        height: 3rem;
+    }
+
+    .container {
+        margin: auto;
+        max-width: 1200px;
+        flex-direction: column;
+        width: 100%;
+
+        .title {
+            width: 100%;
+            padding-top: 80px;
+            padding-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile_potrait {
+                padding-top: 64px;
+            }
+
+            h1 {
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(90deg, #f0f, #8dc4fa 62%, #0ff);
+                -webkit-background-clip: text;
+                background-clip: text;
+                font-size: 64px;
+                width: fit-content;
+                font-weight: 700;
+                line-height: 1;
+
+                @include mobile_potrait {
+                    font-size: 58px;
+                }
+            }
+        }
+
+        .edit_avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include mobile_potrait {}
+
+            .edit_content {
+                width: 140px;
+                height: 140px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+                border: 3px #fff solid;
+                border-radius: 50%;
+                box-shadow: 0 8px 40px #7f6bff88;
+                cursor: pointer;
+
+                &:hover {
+                    .camera_icon {
+                        opacity: 0.7;
+                    }
+                }
+
+                input {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    width: 100px;
+                    height: 100px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                img {
+                    border-radius: 70px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+
+                .camera_icon {
+                    position: absolute;
+                    color: #f0f;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 40px;
+                    opacity: 0.4;
+                    transition: all 0.3s ease;
+                }
+            }
+
+            .profile_link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .edit_cover {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+            margin-top: 20px;
+
+            .upload_container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: dotted 1px grey;
+                border-radius: 12px;
+                height: 200px;
+
+                .caption {
+                    font-size: 14px;
+                    color: grey;
+                }
+
+                .choose_file_btn {
+                    display: inline-block;
+                    position: relative;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    margin-top: 20px;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    background-image: linear-gradient(108deg, #f0f 16%, #0ff);
+                    box-shadow: 0 15px 30px #7f6bff4d;
+                    transition: all 0.3s ease;
+                    cursor: pointer;                    
+                    &:hover {
+                        box-shadow: 0 15px 30px #7f6bff4d, 3px 3px 5px #00000055;
+                    }
+                    input {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        opacity: 0;
+                    }
+                }
+            }
+
+
+            .preview_container {
+                display: flex;
+                flex-direction: column;
+                border: dotted 1px grey;
+                border-radius: 12px;
+                height: 200px;
+                .close_container {
+                    width: 100%;
+                    margin-left: -5px;
+                    margin-top: 5px;
+                    text-align: right;
+                }
+                .media_container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;    
+                    height: 160px;
+                    .img_preview{
+                        border-radius: 6px;
+                        max-width: 80%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+
+        .my_form {
+            width: 100%;
+            padding-top: 32px;
+            display: flex;
+            flex-direction: column;
+            grid-area: auto;
+            gap: 16px;
+
+            .row {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                grid-area: auto;
+                gap: 6px;
+
+                .label {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                }
+
+                input {
+                    width: 100%;
+                    border: 1px solid #f0f;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    padding: 8px;
+
+                    &:focus-visible {
+                        outline: unset;
+                    }
+                }
+
+                textarea {
+                    width: 100%;
+                    border: 1px solid #f0f;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    padding: 8px;
+                    height: 240px;
+
+                    &:focus-visible {
+                        outline: unset;
+                    }
+                }
+
+                .property-add-button {
+                    background: transparent;
+                    border: none;
+                    vertical-align: middle;
+                    svg {
+                        font-size: 26px;
+                        border-radius: 8rem;
+                        border: 2px solid var(--textPrimaryColor);
+                        padding: 3px;
+                    }
+                }
+                .ant-input-group{
+                    display: flex;
+                }
+                .property-remove-button{
+                    background: transparent;
+                    border: none;
+                    vertical-align: middle;
+                }
+            }
+
+            .btn_div {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                grid-area: auto;
+                gap: 24px;
+                width: 100%;
+
+                button {
+                    border-radius: 48px;
+                    padding: 10px 20px;
+                    border: none;
+                    box-shadow: 0 15px 30px #7f6bff4d;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-weight: 700;
+                    white-space: nowrap;
+
+                    text-align: center;
+
+                    &:hover {
+                        box-shadow: 0 15px 30px #7f6bff4d, 3px 3px 5px #00000055;
+                    }
+                }
+
+                .cancel_btn {
+                    background-color: #00000088;
+                    color: #ffffff;
+                    background-image: linear-gradient(134deg, #b5b5b5, #616161 32%, rgb(67, 67, 67));
+                }
+
+                .submit_btn {
+                    color: #ffffff;
+                    background-image: linear-gradient(134deg, #febc07, #f96d63 32%, #f0f);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@import "../../../global.scss";
+.blogCard{
+    border-radius: 24px; 
+    overflow: hidden;
+    width: 100%;
+    background-color: #F2F2F2;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(137deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 4px 424px 0px rgba(0, 7, 72, 0.12);
+    backdrop-filter: blur(10px);
+    &.bg_1{
+        background: linear-gradient(137deg, #00000000 0%, #00000594 100%);
+    }
+    &.bg_2{
+        background: linear-gradient(137deg, #3f3cff00 0%, #b8b6f326 100%);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 24px; 
+        border: 1px solid transparent;
+        background: linear-gradient(to right, #FF00FF, #FE511B) border-box;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+    }
+    @include mobile_potrait{
+        margin-bottom: 24px;
+    }
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-image: linear-gradient(44deg,#f0f,#0ff);
+    //     transition: all 0.3s ease;
+    //     opacity: 0;
+    // }
+    &:hover{
+        transform: translateY(-10px);
+        background: linear-gradient(to right, #FF00FF, #FE511B);
+        &::after{
+            opacity: 1;
+        }
+    }
+    @include mobile_potrait{
+    }
+    img {
+        width: 100%;
+    }
+    .card-content {
+        border-radius: 10px;
+        // border: 1px solid #f0f;   
+        // padding: 16px;
+        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+        @include mobile_potrait{
+            padding: 8px;
+        }
+        .img_div{
+            width: 100%;
+            height: 0;
+            padding-bottom: 56%;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            .img_cover{
+                position: absolute;
+                width: 100%;             
+                height: 100%;
+                background-image: linear-gradient(108deg,rgb(255, 198, 255) 16%,#c1fefe);
+                top : 0;
+                left : 0;
+            }
+        }
+        .item-image{   
+            position: absolute;
+            width: 100%;             
+            height: 100%;
+            object-fit: cover;
+            top : 0;
+            left : 0;
+        }   
+    }
+    .blog-detail-content {
+        padding: 16px 16px 16px 16px;
+        .blog-title {
+            // text-overflow: ellipsis;
+            overflow: hidden;
+            // white-space: nowrap;            
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: 600;
+            height: 60px;
+            @include mobile_potrait{
+                font-size: 16px;
+            }
+        }
+        .sub-bottom{
+            font-weight: 600;
+            margin: 0px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 14px;
+        }  
+    }
+}

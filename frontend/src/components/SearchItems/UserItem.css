@@ -1,0 +1,33 @@
+.search-user-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.search-user-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.search-user-item-info {
+    margin-left: 1rem;
+}
+
+.search-user-item h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.search-user-item p {
+    margin: 0;
+}
+
+.search-user-item:hover {
+    background: var(--lightGrayColor);
+    cursor: pointer;
+}

@@ -1,0 +1,406 @@
+[
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "claim",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "_claimId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "address",
+                "name": "_colAddr",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "_tokenId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "address",
+                "name": "_from",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "_amount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "timestamp",
+                "internalType": "uint256"
+            },
+            {
+                "type": "bytes",
+                "name": "signature_",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "colAddr",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "emergencyBatchTransfer",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_toAddr",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256[]",
+                "name": "_tokenIds",
+                "internalType": "uint256[]"
+            },
+            {
+                "type": "uint256[]",
+                "name": "_amounts",
+                "internalType": "uint256[]"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "emergencyTransfer",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_toAddr",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "_tokenId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "_amount",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "initialize",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_colAddr",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "_signerAddress",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "bytes4",
+                "name": "",
+                "internalType": "bytes4"
+            }
+        ],
+        "name": "onERC1155BatchReceived",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256[]",
+                "name": "",
+                "internalType": "uint256[]"
+            },
+            {
+                "type": "uint256[]",
+                "name": "",
+                "internalType": "uint256[]"
+            },
+            {
+                "type": "bytes",
+                "name": "",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [
+            {
+                "type": "bytes4",
+                "name": "",
+                "internalType": "bytes4"
+            }
+        ],
+        "name": "onERC1155Received",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            },
+            {
+                "type": "bytes",
+                "name": "",
+                "internalType": "bytes"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "owner",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "renounceOwnership",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "uint256",
+                "name": "claimId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "address",
+                "name": "colAddr",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "tokenId",
+                "internalType": "uint256"
+            },
+            {
+                "type": "address",
+                "name": "from",
+                "internalType": "address"
+            },
+            {
+                "type": "uint256",
+                "name": "amount",
+                "internalType": "uint256"
+            },
+            {
+                "type": "uint256",
+                "name": "timestamp",
+                "internalType": "uint256"
+            }
+        ],
+        "name": "rewardClaims",
+        "inputs": [
+            {
+                "type": "uint256",
+                "name": "",
+                "internalType": "uint256"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "setCollectionAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_colAddr",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "setSignerAddress",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "_signerAddress",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "address",
+                "name": "",
+                "internalType": "address"
+            }
+        ],
+        "name": "signerAddress",
+        "inputs": []
+    },
+    {
+        "type": "function",
+        "stateMutability": "view",
+        "outputs": [
+            {
+                "type": "bool",
+                "name": "",
+                "internalType": "bool"
+            }
+        ],
+        "name": "supportsInterface",
+        "inputs": [
+            {
+                "type": "bytes4",
+                "name": "interfaceId",
+                "internalType": "bytes4"
+            }
+        ]
+    },
+    {
+        "type": "function",
+        "stateMutability": "nonpayable",
+        "outputs": [],
+        "name": "transferOwnership",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "newOwner",
+                "internalType": "address"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "name": "Initialized",
+        "inputs": [
+            {
+                "type": "uint8",
+                "name": "version",
+                "indexed": false
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "OwnershipTransferred",
+        "inputs": [
+            {
+                "type": "address",
+                "name": "previousOwner",
+                "indexed": true
+            },
+            {
+                "type": "address",
+                "name": "newOwner",
+                "indexed": true
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "UserClaimed",
+        "inputs": [
+            {
+                "type": "tuple",
+                "name": "rewardClaim",
+                "indexed": false,
+                "components": [
+                    {
+                        "type": "uint256"
+                    },
+                    {
+                        "type": "address"
+                    },
+                    {
+                        "type": "uint256"
+                    },
+                    {
+                        "type": "address"
+                    },
+                    {
+                        "type": "uint256"
+                    },
+                    {
+                        "type": "uint256"
+                    }
+                ]
+            }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "error",
+        "name": "InvalidSignature",
+        "inputs": []
+    },
+    {
+        "type": "error",
+        "name": "InvalidSignatureLength",
+        "inputs": []
+    }
+]

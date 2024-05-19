@@ -1,0 +1,33 @@
+.search-collection-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.search-collection-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8rem;
+    object-fit: cover;
+}
+
+.search-collection-item-info {
+    margin-left: 1rem;
+}
+
+.search-collection-item h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+.search-collection-item p {
+    margin: 0;
+}
+
+.search-collection-item:hover {
+    background: var(--lightGrayColor);
+    cursor: pointer;
+}

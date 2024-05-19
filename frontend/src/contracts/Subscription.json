@@ -1,0 +1,302 @@
+[
+  {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+  },
+  {
+      "inputs": [],
+      "name": "FailedWithdrawn",
+      "type": "error"
+  },
+  {
+      "inputs": [],
+      "name": "StillActive",
+      "type": "error"
+  },
+  {
+      "anonymous": false,
+      "inputs": [
+          {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+          },
+          {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+          }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+  },
+  {
+      "anonymous": false,
+      "inputs": [
+          {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+          },
+          {
+              "components": [
+                  {
+                      "internalType": "address",
+                      "name": "user",
+                      "type": "address"
+                  },
+                  {
+                      "internalType": "address",
+                      "name": "col_addr",
+                      "type": "address"
+                  },
+                  {
+                      "internalType": "uint256",
+                      "name": "last_date",
+                      "type": "uint256"
+                  },
+                  {
+                      "internalType": "uint256",
+                      "name": "expire_date",
+                      "type": "uint256"
+                  }
+              ],
+              "indexed": false,
+              "internalType": "struct HexToysSubscription.Subscribe",
+              "name": "_subscribe",
+              "type": "tuple"
+          }
+      ],
+      "name": "UserSubscribed",
+      "type": "event"
+  },
+  {
+      "inputs": [],
+      "name": "coinFee",
+      "outputs": [
+          {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [],
+      "name": "feeCollector",
+      "outputs": [
+          {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+          {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "address",
+              "name": "colAddr",
+              "type": "address"
+          },
+          {
+              "internalType": "uint256",
+              "name": "_period",
+              "type": "uint256"
+          }
+      ],
+      "name": "paySubscription",
+      "outputs": [
+          {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+          }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+  },
+  {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "uint256",
+              "name": "_newCoinFee",
+              "type": "uint256"
+          }
+      ],
+      "name": "setCoinFee",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "address",
+              "name": "_feeCollector",
+              "type": "address"
+          }
+      ],
+      "name": "setNewPaymentCollector",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+          }
+      ],
+      "name": "subscribes",
+      "outputs": [
+          {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+          },
+          {
+              "internalType": "address",
+              "name": "col_addr",
+              "type": "address"
+          },
+          {
+              "internalType": "uint256",
+              "name": "last_date",
+              "type": "uint256"
+          },
+          {
+              "internalType": "uint256",
+              "name": "expire_date",
+              "type": "uint256"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [],
+      "name": "totalCoins",
+      "outputs": [
+          {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+          }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+          },
+          {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+          }
+      ],
+      "name": "userSubscribe",
+      "outputs": [
+          {
+              "internalType": "address",
+              "name": "user",
+              "type": "address"
+          },
+          {
+              "internalType": "address",
+              "name": "col_addr",
+              "type": "address"
+          },
+          {
+              "internalType": "uint256",
+              "name": "last_date",
+              "type": "uint256"
+          },
+          {
+              "internalType": "uint256",
+              "name": "expire_date",
+              "type": "uint256"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [
+          {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+          }
+      ],
+      "name": "userTotalCoins",
+      "outputs": [
+          {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+          }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+  },
+  {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+  },
+  {
+      "stateMutability": "payable",
+      "type": "receive"
+  }
+]

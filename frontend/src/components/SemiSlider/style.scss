@@ -1,0 +1,58 @@
+.semi-slider-container {
+  height: 223px;
+  width: 500px;
+
+  @media only screen and (max-width: 500px) {
+    width: 300px;
+    height: 173px;
+  }
+
+  margin: auto;
+  display: inline-block;
+
+  #circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  #status {
+    text-align: center;
+    font-family: Sora;
+    font-size: 58.981px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 67.828px */
+    letter-spacing: 0.184px;
+    color: white;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 36px;
+      letter-spacing: 0.114px;
+    }
+  }
+
+  #score {
+    text-align: center;
+    font-family: Inter;
+    font-size: 16.588px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 29.49px;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 13px;
+      line-height: 15.997px;
+    }
+  }
+
+  &.light {
+    #status {
+      color: #000;
+    }
+
+    #score {
+      color: rgba(0, 0, 0, 0.60);
+    }
+  }
+}

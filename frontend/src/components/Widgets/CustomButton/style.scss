@@ -1,0 +1,142 @@
+@import "../../../global.scss";
+.custom_btn{
+    padding: 10px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 16px;
+    box-sizing: border-box;
+    letter-spacing: 0.49px;
+    border: none;
+    @include mobile_potrait{
+        padding: 6px 20px;
+    }
+    &.fillBtn{
+        background-image: linear-gradient(108deg,#FF00FF 16%,#FE511B);
+        color: #ffffff;
+        &:hover{
+            background-image: linear-gradient(#FF00FF 16%,#FE511B);
+    
+        }
+    }
+    &.outlineBtnColor{
+        background: linear-gradient(to right,#FF00FF, #FE511B);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px; 
+            border: 2px solid transparent;
+            background: linear-gradient(to right, #FF00FF, #FE511B) border-box;
+            transition: all 0.3s ease;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+        }
+        &:hover{
+            background: linear-gradient(to right,#FF00FF, #FE511B);
+            -webkit-text-fill-color: #fff;
+            border-radius: 8px;
+            &::before {
+                // background: linear-gradient(to right, #FF00FF, #FE511B)
+            }
+        }
+    }
+    &.outlineBtn{
+        border-radius: 8px;
+        background-color: #ffffff00;
+        color: #737373;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px; 
+            border: 2px solid transparent;
+            background: linear-gradient(to right, #262840, #262840) border-box;
+            transition: all 0.3s ease;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+        }
+        
+        &:hover{
+            &::before {
+                background: linear-gradient(to right, #FF00FF88, #FE511B88) border-box;
+
+            }
+        }
+    }
+    &.greyColor_dark{
+        color : #fff;
+        background: #ffffff14;
+        &:hover{
+            background: #ffffff33;
+        }
+    }
+    &.greyColor_light{
+        color : #000;
+        background: #00000014;
+        &:hover{
+            background: #00000033;
+        }
+    }
+    &.whiteColor_dark{
+        color : #000;
+        background: #fff;
+        &:hover{
+            background: #ffffff33;
+        }
+    }
+    &.whiteColor_light{
+        color : #fff;
+        background: #000;
+        &:hover{
+            background: #00000033;
+        }
+    }
+    &.md{
+        font-size: 14px;
+        height: 46px;
+        @include mobile_potrait{
+            height: 36px;
+            font-size: 13px;
+        }
+    }
+    &.sm{
+        font-size: 14px;
+        height: 36px;
+        padding: 5px 16px;
+    }
+    &.roundFull{
+        border-radius: 50px !important;
+        &::before {
+            border-radius: 50px !important;
+        }
+    }
+    &.w_full{
+        width: 100%;
+    }
+    &:disabled{
+        filter: grayscale(1);
+        cursor:not-allowed;
+    }
+
+    
+}

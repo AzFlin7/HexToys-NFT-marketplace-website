@@ -1,0 +1,176 @@
+@import "../../../global.scss";
+.leaderBoardCard{
+    border-radius: 10px;
+    max-width: 360px;
+    width: 100%;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    @include mobile_potrait{
+        margin-bottom: 24px;
+    }
+    .content_div{
+        width: 100%;
+        height: 0;
+        padding-bottom: 117%;
+        position: relative;
+        &.big{
+            padding-bottom: 143%;
+            .card-wrapper{
+                border-radius: 24px;
+                border-right: 5px solid rgba(152, 92, 253, 0.25);
+                border-bottom: 5px solid rgba(152, 92, 253, 0.25);
+                background: linear-gradient(0deg, #261A48 0%, #261A48 100%), #090A1B;
+            }
+        }
+        .card-content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top : 0;
+            left : 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    .card-wrapper{
+        padding: 30px;
+        padding-top: 60px;
+        width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-radius: 24px;
+        border-right: 3px solid rgba(152, 92, 253, 0.20);
+        border-bottom: 3px solid rgba(152, 92, 253, 0.20);
+        background: #090A1B;
+        &.bg_light{
+            background: #F5F5F5 !important;
+        }
+        
+        @include mobile_potrait{
+        }
+        .leader_icon{
+           width: 96px; 
+           height: 96px;
+           position: absolute;
+           top: -43px;
+        }
+        .img_div{
+            width: 100%;
+            padding-bottom: 100%;
+            height: 0;
+            position: relative;
+            border-radius: 100px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            .img_cover{
+                position: absolute;
+                width: 100%;             
+                height: 100%;
+                background-image: linear-gradient(108deg,rgb(255, 198, 255) 16%,#c1fefe);
+                top : 0;
+                left : 0;
+            }
+            .item-image{   
+                position: absolute;
+                width: 100%;             
+                height: 100%;
+                object-fit: cover;
+                top : 0;
+                left : 0;
+            } 
+        }
+        .avatar_div{
+            width: 104px;
+            height: 104px;
+            flex-shrink: 0;
+            margin-bottom: 30px;
+        }
+        .user-title {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;            
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 115%;
+            letter-spacing: 0.232px;
+            @include mobile_potrait{
+                font-size: 16px;
+            }
+        }
+        .detail-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            
+            .col_div {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                grid-area: auto;
+                gap : 8px;
+                .row_div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+                span{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    justify-content: center;
+                }
+                .sub_text {
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    margin: 0;
+                    margin-bottom: 0;
+                    display: flex;
+                    
+                    &.color1 {
+                        color: #E94949;  
+                        font-weight: 700; 
+                        font-size: 18px;     
+                    }
+                    &.color2 {
+                        color: #28B833;
+                        font-weight: 700; 
+                        font-size: 18px;     
+                    }
+                }
+                
+                
+                .text_color_1_dark{
+                    font-weight: 700;
+                }
+                .text_color_1_light{
+                    font-weight: 700;
+                }
+                @include mobile_potrait{
+                    font-size: 14px;
+                }
+            }
+        }
+          
+    }
+    
+}

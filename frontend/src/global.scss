@@ -1,0 +1,47 @@
+$width : 640px;
+$bg_color: #000;
+$str_color:rgb(60, 190, 112);
+@mixin mobile_potrait{
+    @media screen and (max-width: $width) and (orientation:portrait){
+        @content
+    }
+};
+@mixin mobile_landscape{
+    @media screen and (max-height: $width) and (orientation:landscape){
+        @content
+    }
+};
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  display: none;
+  @media screen and (max-width: 648px) and (orientation: portrait) {
+    height: 3px;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(52, 52, 52, 0.5);
+  border-radius: 5px;
+  padding : 5px,
+}
+
+::-webkit-scrollbar-track {
+  background: #00000011;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+
+}
+
+
+.infinite-scroll-component  {
+  padding-top: 10px;
+}

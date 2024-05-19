@@ -1,0 +1,127 @@
+@import "../../global.scss";
+
+.create {
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 135px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+    .section_title{
+        margin: auto;
+        margin-bottom: 16px;
+        font-family: 'Sora', sans-serif;
+        @include mobile_potrait {
+            margin-bottom: 22px;
+            font-size: 22px;
+
+        }
+    }
+    .sub_text{
+        max-width: 600px;
+        text-align: center;
+        font-size: 15px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        display: flex;
+        margin: auto;
+        max-width: 1200px;
+        
+        flex-direction: column;
+        width: 100%;
+        margin-top: 56px;
+        @media(max-width:820px){
+            padding: 0px 32px; 
+        }
+    }
+
+    .wrapper {
+        padding: 0px 32px;
+        display: flex;
+        // align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        grid-area: auto;
+        gap : 10px;
+        @include mobile_potrait{
+            padding: 0px 0px;
+            flex-direction: column;
+        }
+
+        &.pb-40{
+            padding-bottom: 40px;
+        }
+        &.flex-end{
+            align-items: flex-end;
+        }
+        &.column{
+            @include mobile_potrait{
+                flex-direction: column;
+            }
+        }
+        .col_div{
+            cursor: pointer;
+            width: 32%;
+            height: auto;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 24px;
+            box-sizing: border-box;
+            padding: 32px;
+            grid-area: auto;
+            gap : 24px;
+            transition : 0.3s ease;
+            @include mobile_potrait{
+                width: 100%;
+                margin-bottom: 16px;
+                gap : 16px;
+            }
+            &:hover{
+                transform: translateY(-10px);
+            }
+            &.border_dark{
+                border: 1px solid #FFFFFF33;
+            }
+            &.border_light{
+                border: 1px solid #00000033;
+            }
+            h3{
+                font-size: 18px;
+                margin-bottom: 0;
+                @include mobile_potrait{
+                    font-size: 16px;
+                }
+            }
+            p{
+                max-width: 300px;
+                margin-bottom: 0;
+                @include mobile_potrait{
+                    font-size: 9px;
+                }
+            }
+            .icon_div{
+                width: 55px;
+                height: 84px;
+                position: relative;
+                @include mobile_potrait{
+                    width: 58px;
+                    height: 76px;
+                }
+                img{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+}

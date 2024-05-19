@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('TTNormsPro-Light.eot');
+    src: url('TTNormsPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('TTNormsPro-Light.woff2') format('woff2'),
+        url('TTNormsPro-Light.woff') format('woff'),
+        url('TTNormsPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('TTNormsPro-Bold.eot');
+    src: url('TTNormsPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('TTNormsPro-Bold.woff2') format('woff2'),
+        url('TTNormsPro-Bold.woff') format('woff'),
+        url('TTNormsPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('TTNormsPro-Italic.eot');
+    src: url('TTNormsPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('TTNormsPro-Italic.woff2') format('woff2'),
+        url('TTNormsPro-Italic.woff') format('woff'),
+        url('TTNormsPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('TTNormsPro-Regular.eot');
+    src: url('TTNormsPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('TTNormsPro-Regular.woff2') format('woff2'),
+        url('TTNormsPro-Regular.woff') format('woff'),
+        url('TTNormsPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('TTNormsPro-Medium.eot');
+    src: url('TTNormsPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('TTNormsPro-Medium.woff2') format('woff2'),
+        url('TTNormsPro-Medium.woff') format('woff'),
+        url('TTNormsPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

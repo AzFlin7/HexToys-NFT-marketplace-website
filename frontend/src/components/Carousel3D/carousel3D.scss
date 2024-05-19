@@ -1,0 +1,100 @@
+@import "../../global.scss";
+.carousel3D{
+    width: 100%;
+    position: relative;
+    border-radius: 16px;
+
+    // transform: perspective(1500px) rotateY(15deg);
+    // border-radius: 1rem;
+    // box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    // transition: transform 1s ease 0s;
+
+    // &:hover {
+    //     transform: perspective(3000px) rotateY(5deg);
+    // }
+
+    @include mobile_potrait {
+        max-width: 70vw;
+        width: 70vw;
+        height: 70vw;
+        padding-bottom: 0;
+        margin: auto;
+    }
+    .slide_view{
+        width: 100%;
+        position : relative;
+        height : 0;
+        padding-bottom : 30%;
+        @include mobile_potrait {
+          padding-bottom : 60%;
+        }
+        .slide_list{
+          position : absolute;
+          display: flex;
+          height : 100%;
+          transition : all 0.3s ease;
+          .slide_item{
+            width: 20%;
+            height : 100%;
+            position : relative;
+            border-radius : 20px;
+            transition : all 0.3s ease;
+            // transform : scale(0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mobile_potrait {
+            }
+          }
+          .active-item{
+            // transform : scale(1.2);
+          }
+          .none1-item{
+            // transform : scale(0.8);
+          }
+          .none2-item {
+            // transform : scale(0.4);
+          }
+          
+        }
+      }
+      .navBtns{
+        position : absolute;
+        top : 50%;
+        width: 100%;
+        z-index : 1;
+        display: flex;
+        align-items: center;
+        justify-content : space-between;
+        left : 0;
+        @include mobile_potrait {
+          width: calc(100% + 40px);
+          left : -20,
+        }
+        button {
+          border : none;
+          background : #aaa;
+          width : 30;
+          height : 30;
+          border-radius : 30px;
+          font-size : 20px;
+          color : #fff;
+          cursor : pointer;
+          transition : all 0.3s ease;
+          &:hover {
+            color : #777;
+          }
+          @include mobile_potrait {
+            width : 25px;
+            height : 25px;
+            font-style : 16px;
+          }
+        }
+        .leftBtn{
+  
+        }
+        .rightBtn{
+  
+        }
+      }
+}

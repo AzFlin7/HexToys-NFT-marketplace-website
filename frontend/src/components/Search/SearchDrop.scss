@@ -1,0 +1,123 @@
+.search-drop {
+    
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, .1);
+    padding: 1rem;
+    max-width: 600px;
+    max-height: 500px;
+    overflow-y: scroll;
+    &.bg_color_dark{
+        background: #222;
+        border: 1px solid #555;
+    }
+    &.bg_color_light{
+        background: #eee;
+        border: 1px solid #aaa;
+    }
+
+    &.no-padding {
+        padding: 0;
+        border: none;
+    }
+}
+
+.search-drop .search-drop-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-drop .search-drop-header button {
+    border: 1px solid transparent;
+    border-radius: 8rem;
+    height: 30px;
+    padding: 0 1rem;
+    outline: none;
+    font-weight: 700;
+    &.bg_color_dark{
+        background: #aaa;
+        color : #333
+    }
+    &.bg_color_light{
+        background: #333;
+        color : #aaa
+    }
+    cursor: pointer;
+}
+
+.search-drop-header .ant-input-affix-wrapper {
+    background: var(--backgroundWhiteColor);
+    outline: none;
+    border: 1px solid var(--lightGrayColor);
+}
+
+.search-drop-header .ant-input-affix-wrapper svg {
+    color: var(--textPrimaryColor);
+}
+
+.search-drop-header input {
+    color: var(--textPrimaryColor);
+}
+
+.search-drop .search-drop-search-text {
+    font-size: 1rem;
+    color: var(--textLightColor);
+}
+
+.search-drop .search-drop-search-text > span {
+    color: var(--textPrimaryColor);
+    font-weight: 700;
+}
+
+.search-drop-items {
+    margin-top: 1rem;
+}
+
+.search-drop .search-drop-items .popular-item-text {
+    font-size: .9rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.search-drop-header .ant-input-affix-wrapper:hover {
+    border: 1px solid var(--lightGrayColor);
+}
+
+.search-drop-header span {
+    border-radius: 1rem;
+    padding: 4px;
+    outline: none;
+}
+
+.search-drop-header input {
+    border: 1px solid var(--lightGrayColor);
+    border-radius: 8rem;
+    width: 100%;
+}
+
+.search-explore-item {
+    /* display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    padding: 8px 2rem;
+    margin: 8px;
+    height: 35px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    background: var(--buttonColor); */
+    display: inline-block;
+}
+.search-explore-item p {
+    color: var(--buttonSecondaryTextColor);
+    font-weight: 700;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    padding: 2px 1rem;
+    margin: 8px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    background: var(--buttonSecondaryColor);
+}

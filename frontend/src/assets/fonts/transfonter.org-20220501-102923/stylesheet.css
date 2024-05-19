@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('TTNormsPro-ExtraBold.eot');
+    src: url('TTNormsPro-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('TTNormsPro-ExtraBold.woff2') format('woff2'),
+        url('TTNormsPro-ExtraBold.woff') format('woff'),
+        url('TTNormsPro-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

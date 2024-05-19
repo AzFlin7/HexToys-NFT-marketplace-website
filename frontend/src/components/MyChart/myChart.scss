@@ -1,0 +1,37 @@
+@import "../../global.scss";
+.myChart{
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    @include mobile_potrait{
+        margin-bottom: 24px;
+    }
+    .chart_div{
+        width: 100%;
+        height: 300px;
+    }
+    .custom-tooltip{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        grid-area: auto;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px #ff00ff33 solid;
+        gap : 8px;
+        max-width: 200px;
+        box-shadow: 0 15px 30px #7f6bff4d;
+        p{
+            margin: 0;
+            line-height: 1;
+        }
+        .vol {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import "../../global.scss";
+.footer{
+    align-items: center;
+    justify-content: center;
+    
+    .container{
+        max-width: 1200px;
+        margin: auto;
+        flex-direction: column;
+        @media (min-width: 820px) {
+            padding: 0 24px;
+        } 
+        @include mobile_potrait{
+            padding: 0 24px;
+        }
+        .footer_links{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            @include mobile_potrait{
+                flex-wrap: wrap;
+            }
+            .logo{
+                @include mobile_potrait{
+                    width: 100%;
+                }
+                a{
+                    img{
+                        height: 40px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+            
+            ul{
+                padding: 0;
+                @include mobile_potrait{
+                    // height: 70vh;
+                    // width: auto;
+                    // left: auto;
+                    // top: auto;
+                    // bottom: 0;
+                    
+                }
+                &.flex-wrap{
+                    @include mobile_potrait{
+                        display: flex;
+                        flex-wrap: wrap;
+                    } 
+                }
+                li{
+                    margin-bottom: 5px;
+                    h2{
+                        font-size: 18px;
+                    }
+                    a{
+                        font-weight: 500;
+                        font-size: 16px;
+                        position: relative;
+                        &:hover{
+                            &:after{
+                                width: 100%;
+                                left : 0;
+                            }
+                        }
+                        &:after{
+                            content: "";
+                            width: 0;
+                            height: 1px;
+                            background-image: linear-gradient(108deg,#f0f 16%,#0ff); 
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            transition: all 0.3s ease;
+
+                        }
+                        img{
+                            height: 40px;
+                            &.img_light{
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+                .w-50{
+                    @include mobile_potrait{
+                        width: 50%;
+                    } 
+                }
+                .link-title{
+                    margin-bottom: 8px;
+                    @include mobile_potrait{
+                        width: 100%;
+                    } 
+                    a{
+                        color: #aaa;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+        }
+        .line{
+            width: 100%;
+            height: 1px;
+            background-image: linear-gradient(108deg,#f0f 16%,#0ff); 
+        }
+        .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 14px;
+            padding-bottom: 16px;
+            @include mobile_potrait{
+                flex-direction: column;
+            }
+            p{
+                font-size: 14px;
+            }
+            .social-icons{
+                display: flex;
+                align-items: center;
+                grid-area: auto;
+                gap : 24px;
+                @include mobile_potrait{
+                    gap : 16px;
+                }
+                a{
+                    transition: all 0.3s ease;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                    img{
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
